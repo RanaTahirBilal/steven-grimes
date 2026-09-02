@@ -569,25 +569,28 @@ a:focus-visible,button:focus-visible{ outline:2px solid var(--crimson); outline-
 </footer>
 
 <script>
+/* The level scheme is content, not decoration, so it is drawn before
+   and outside the reveal guard below. Built inside that guard it would
+   simply not exist for anyone who opened the page in a background tab,
+   which is most people who middle-click a link. */
+(function(){
+  "use strict";
+  var box = document.getElementById('density');
+  if (!box) { return; }
+  var N = 30, html = '';
+  for (var i = 0; i < N; i++) {
+    var t = i / (N - 1);                        /* 0 at the top, 1 at the bottom */
+    var gap = Math.round(1 + Math.pow(t, 2.4) * 46);
+    var lit = (i === N - 1) || (i === N - 5) || (i === N - 11);
+    html += '<i class="' + (lit ? 'on' : '') + '" style="--m:' + gap + 'px"></i>';
+  }
+  box.innerHTML = html;
+})();
+
 (function(){
   "use strict";
   if (!('IntersectionObserver' in window) || document.visibilityState !== 'visible') { return; }
   document.documentElement.classList.add('js');
-
-  /* the level scheme in the subject band, drawn rather than pictured:
-     twenty-two rules whose spacing shrinks as the diagram rises, which
-     is what happens to nuclear states as excitation energy goes up. */
-  var box = document.getElementById('density');
-  if (box) {
-    var N = 30, html = '';
-    for (var i = 0; i < N; i++) {
-      var t = i / (N - 1);                      /* 0 at the top, 1 at the bottom */
-      var gap = Math.round(1 + Math.pow(t, 2.4) * 46);
-      var lit = (i === N - 1) || (i === N - 5) || (i === N - 11);
-      html += '<i class="' + (lit ? 'on' : '') + '" style="--m:' + gap + 'px"></i>';
-    }
-    box.innerHTML = html;
-  }
 
   /* Reveal. .rv starts hidden, so it has to fail open: an observer, a
      sweep on scroll for anchor jumps, and an unconditional backstop. */

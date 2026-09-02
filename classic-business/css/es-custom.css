@@ -1,0 +1,708 @@
+/* ==========================================================================
+   Dr. Steven M. Grimes — overrides on the MegaOne classic-business demo.
+   Ink, paper and antique brass. Caslon for the scholarship, mono for the
+   instruments. Luxury layer appended at the foot of this file.
+   ========================================================================== */
+
+:root{
+  --es-ink:#14181b;
+  --es-steel:#17323f;
+  --es-steel-2:#1F4759;
+  --es-copper:#c2762b;
+  --es-copper-2:#dd9a51;
+  --es-soft:#f4f2ee;
+  --es-ease:cubic-bezier(.22,.61,.36,1);
+}
+
+h1,h2,h3,h4,h5,
+.counter .media-body h3,
+.quote-section h3{
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif !important;
+  font-weight:400 !important;
+  letter-spacing:-.01em;
+}
+
+.es-eyebrow{
+  display:inline-flex; align-items:center; gap:12px;
+  font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--es-copper); margin-bottom:14px;
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+.es-eyebrow::before{ content:''; width:34px; height:1px; background:var(--es-copper); }
+
+.es-head{ max-width:760px; margin:0 auto 58px; text-align:center; }
+.es-head .es-eyebrow::before{ display:none; }
+.es-head h2{ font-size:clamp(1.9rem,3.4vw,2.7rem); margin-bottom:14px; }
+.es-head p{ color:#5a636c; margin:0; }
+
+.es-sub{
+  font-size:13px !important; font-weight:600 !important; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--es-steel); margin-bottom:22px;
+  font-family:'Poppins','Montserrat',sans-serif !important;
+}
+
+/* ---------- brand wordmark in the navbar ---------- */
+.es-wordmark{ display:block; line-height:1.2; }
+.es-wordmark b{
+  display:block; font-family:'Source Serif 4',serif; font-weight:600;
+  font-size:19px; color:var(--es-ink); letter-spacing:.005em;
+}
+.es-wordmark small{
+  display:block; font-size:9.5px; font-weight:600; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--es-copper); margin-top:1px;
+}
+.es-side-mono{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:76px; height:76px; border-radius:14px; color:#fff; font-weight:700;
+  font-size:26px; letter-spacing:.03em;
+  /* background-color as well as the gradient: the gradient is invisible
+     to getComputedStyle().backgroundColor, so an auditor reads this as
+     white-on-white. White measures 3.55:1 on #C2762B and 5.40:1 on
+     #9a5b1c, so the mark passes large-text AA across the whole ramp. */
+  background-color:#A8641F;
+  background-image:linear-gradient(140deg,var(--es-copper) 0%,#9a5b1c 100%);
+}
+
+/* ---------- hero ---------- */
+.es-hero{
+  position:relative; padding:190px 0 120px; overflow:hidden;
+  background:var(--es-ink);
+}
+.es-hero-bg{
+  position:absolute; inset:0;
+  background:url("../img/hero-bg.jpg") center/cover no-repeat;
+  opacity:.55;
+}
+.es-hero-veil{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 78% 18%, rgba(194,118,43,.30), transparent 62%),
+    linear-gradient(100deg, rgba(20,24,27,.97) 0%, rgba(20,24,27,.86) 46%, rgba(20,24,27,.55) 100%);
+}
+.es-hero .container{ position:relative; z-index:2; }
+.es-hero-copy{ max-width:640px; }
+.es-kicker{
+  display:inline-flex; align-items:center; gap:11px;
+  padding:8px 18px; border:1px solid rgba(255,255,255,.2); border-radius:100px;
+  font-size:10.5px; font-weight:600; letter-spacing:.19em; text-transform:uppercase;
+  color:rgba(255,255,255,.82); background:rgba(255,255,255,.05); margin-bottom:28px;
+}
+.es-kicker i{
+  width:6px; height:6px; border-radius:50%; background:var(--es-copper);
+  box-shadow:0 0 0 4px rgba(194,118,43,.22);
+}
+.es-hero h1{
+  color:#fff !important; font-size:clamp(2.4rem,5.4vw,4.2rem); line-height:1.06;
+  margin:0 0 22px; letter-spacing:-.022em;
+}
+.es-hero h1 span{
+  display:block; margin-top:18px; font-size:.27em; font-weight:600;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--es-copper-2);
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+.es-hero-lead{
+  color:#fff; font-size:19px; line-height:1.65; margin:0 0 16px; max-width:560px;
+  font-family:'Source Serif 4',serif;
+}
+.es-hero-sub{ color:rgba(255,255,255,.64); font-size:15px; line-height:1.85; max-width:560px; }
+.es-hero-cta{ display:flex; flex-wrap:wrap; gap:14px; margin:34px 0 0; }
+.es-hero-meta{
+  display:flex; flex-wrap:wrap; gap:12px 32px; list-style:none; margin:44px 0 0; padding:26px 0 0;
+  border-top:1px solid rgba(255,255,255,.13);
+}
+.es-hero-meta li{
+  display:flex; align-items:center; gap:10px; font-size:11.5px; font-weight:500;
+  letter-spacing:.09em; text-transform:uppercase; color:rgba(255,255,255,.62);
+}
+.es-hero-meta i{ color:var(--es-copper); font-size:15px; }
+
+.es-portrait{ position:relative; margin-left:auto; max-width:430px; }
+.es-portrait::before{
+  content:''; position:absolute; inset:-16px -16px 34px 34px;
+  border:1px solid rgba(194,118,43,.55); border-radius:3px;
+}
+.es-portrait img{
+  position:relative; width:100%; border-radius:3px; display:block;
+  box-shadow:0 34px 80px rgba(0,0,0,.55); filter:saturate(.94) contrast(1.03);
+}
+.es-portrait-tag{
+  position:absolute; left:-22px; bottom:-26px; z-index:3;
+  background:var(--es-copper); color:#fff; padding:16px 24px; border-radius:3px;
+  box-shadow:0 18px 40px rgba(0,0,0,.4);
+}
+.es-portrait-tag b{
+  display:block; font-family:'Source Serif 4',serif; font-size:26px; line-height:1;
+}
+.es-portrait-tag span{
+  display:block; font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  margin-top:5px; opacity:.9;
+}
+
+.es-scroll{
+  position:absolute; left:50%; bottom:26px; transform:translateX(-50%); z-index:3;
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  font-size:9.5px; letter-spacing:.24em; text-transform:uppercase;
+  color:rgba(255,255,255,.42); font-weight:600;
+}
+.es-scroll i{ width:1px; height:42px; background:linear-gradient(rgba(255,255,255,.45),transparent); }
+.es-scroll:hover{ color:#fff; text-decoration:none; }
+
+/* ---------- about ---------- */
+.es-about{ padding:110px 0; }
+.es-about-figure{ position:relative; }
+.es-about-figure img{ width:100%; border-radius:3px; box-shadow:0 24px 60px rgba(20,24,27,.18); }
+.es-about-badge{
+  position:absolute; right:-18px; bottom:-24px; background:var(--es-steel); color:#fff;
+  padding:20px 26px; border-radius:3px; max-width:250px;
+  box-shadow:0 20px 44px rgba(20,24,27,.28);
+}
+.es-about-badge b{ display:block; font-family:'Source Serif 4',serif; font-size:24px; line-height:1; }
+.es-about-badge span{
+  display:block; margin-top:8px; font-size:11px; line-height:1.6;
+  letter-spacing:.05em; color:rgba(255,255,255,.72);
+}
+.es-block{ padding-left:22px; }
+.es-block h2{ font-size:clamp(1.8rem,3.2vw,2.5rem); margin-bottom:20px; }
+.es-lead{ font-size:17.5px; line-height:1.8; color:var(--es-ink); }
+.es-block p{ color:#5a636c; line-height:1.9; }
+.es-facts{ list-style:none; margin:28px 0 0; padding:0; }
+.es-facts li{
+  padding:15px 0; border-top:1px solid rgba(20,24,27,.12);
+  font-size:14.5px; color:var(--es-ink);
+}
+.es-facts li:last-child{ border-bottom:1px solid rgba(20,24,27,.12); }
+.es-facts b{
+  display:block; font-size:10.5px; font-weight:600; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--es-copper); margin-bottom:3px;
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+
+/* ---------- career ---------- */
+.es-career{ padding:110px 0; background:var(--es-soft); }
+.es-era{
+  background:#fff; border:1px solid rgba(20,24,27,.09); border-radius:3px;
+  padding:36px 32px; height:100%; position:relative; overflow:hidden;
+  transition:transform .45s var(--es-ease), box-shadow .45s var(--es-ease);
+}
+.es-era::after{
+  content:''; position:absolute; left:0; top:0; width:0; height:3px;
+  background:var(--es-copper); transition:width .5s var(--es-ease);
+}
+.es-era:hover{ transform:translateY(-6px); box-shadow:0 24px 56px rgba(20,24,27,.13); }
+.es-era:hover::after{ width:100%; }
+.es-era.is-now{ background:var(--es-steel); }
+.es-era.is-now h3{ color:#fff; }
+.es-era.is-now p{ color:rgba(255,255,255,.72); }
+.es-era.is-now .es-era-where{ color:rgba(255,255,255,.6); }
+.es-era-when{
+  display:block; font-size:11px; font-weight:700; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--es-copper); margin-bottom:10px;
+}
+.es-era h3{ font-size:1.35rem; margin-bottom:6px; }
+.es-era-where{
+  display:block; font-size:11.5px; font-weight:600; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--es-steel-2); margin-bottom:16px;
+}
+.es-era p{ font-size:14.5px; line-height:1.85; color:#5a636c; margin:0; }
+
+/* ---------- credentials ---------- */
+.es-creds{ padding:110px 0; }
+.es-creds-list{ list-style:none; margin:0 0 44px; padding:0; }
+.es-creds-list li{
+  display:grid; grid-template-columns:78px 1fr; gap:20px; align-items:baseline;
+  padding:20px 0; border-top:1px solid rgba(20,24,27,.11);
+}
+.es-creds-list li:last-child{ border-bottom:1px solid rgba(20,24,27,.11); }
+.es-creds-list .yr{
+  font-family:'Source Serif 4',serif; font-size:19px; color:var(--es-copper);
+}
+.es-creds-list .what{ font-size:15px; color:var(--es-ink); font-weight:500; line-height:1.6; }
+.es-creds-list .what small{
+  display:block; font-size:12.5px; color:#6a737c; font-weight:400; margin-top:3px;
+}
+.es-affil{ margin-top:26px; }
+.es-affil ul{ display:flex; flex-wrap:wrap; gap:12px; list-style:none; margin:0; padding:0; }
+.es-affil li{
+  display:flex; align-items:center; gap:12px; padding:15px 22px;
+  border:1px solid rgba(20,24,27,.12); border-radius:3px; background:#fff;
+  transition:border-color .35s var(--es-ease), transform .35s var(--es-ease);
+}
+.es-affil li:hover{ border-color:var(--es-copper); transform:translateY(-3px); }
+.es-affil i{ color:var(--es-copper); font-size:17px; }
+.es-affil span{ font-size:14px; color:var(--es-ink); font-weight:500; }
+.es-affil small{
+  display:block; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:#6a737c; font-weight:600; margin-top:2px;
+}
+
+/* ---------- quote ---------- */
+.quote-section .es-cite{
+  display:block; margin-top:26px; font-size:11px; letter-spacing:.21em;
+  text-transform:uppercase; font-weight:600; color:rgba(255,255,255,.7);
+}
+
+/* ---------- honours ---------- */
+.es-honours{ padding:110px 0; background:var(--es-ink); }
+.es-honours .es-head h2{ color:#fff; }
+.es-honours .es-head p{ color:rgba(255,255,255,.6); }
+.es-hon{
+  border:1px solid rgba(255,255,255,.14); border-radius:3px; padding:34px 30px;
+  background:rgba(255,255,255,.03); height:100%;
+  transition:background .4s var(--es-ease), border-color .4s var(--es-ease), transform .4s var(--es-ease);
+}
+.es-hon:hover{ background:rgba(255,255,255,.06); border-color:rgba(194,118,43,.55); transform:translateY(-5px); }
+.es-hon i{ font-size:25px; color:var(--es-copper-2); display:block; margin-bottom:18px; }
+.es-hon span{
+  display:block; font-size:10.5px; letter-spacing:.17em; text-transform:uppercase;
+  color:var(--es-copper); font-weight:600; margin-bottom:9px;
+}
+.es-hon h3{ font-size:1.2rem; color:#fff; margin-bottom:10px; }
+.es-hon p{ font-size:14px; color:rgba(255,255,255,.62); margin:0; line-height:1.8; }
+
+/* ---------- contact ---------- */
+.contact-section .form-control{ border-radius:2px; }
+.es-submit{ border:none; cursor:pointer; }
+
+/* ---------- footer ---------- */
+footer p a{ color:var(--es-copper-2); }
+footer p a:hover{ color:#fff; }
+
+/* ---------- responsive ---------- */
+@media (max-width:1199px){
+  .es-block{ padding-left:0; }
+}
+@media (max-width:991px){
+  .es-hero{ padding:150px 0 90px; text-align:center; }
+  .es-hero-copy{ margin:0 auto 56px; }
+  .es-kicker{ margin-left:auto; margin-right:auto; }
+  .es-hero-lead,.es-hero-sub{ margin-left:auto; margin-right:auto; }
+  .es-hero-cta{ justify-content:center; }
+  .es-hero-meta{ justify-content:center; }
+  .es-portrait{ margin:0 auto; }
+  .es-about,.es-career,.es-creds,.es-honours{ padding:78px 0; }
+  .es-about-figure{ margin-bottom:56px; }
+  .es-about-badge{ right:0; }
+  .es-era{ margin-bottom:24px; }
+  .es-hon{ margin-bottom:24px; }
+  .es-scroll{ display:none; }
+}
+@media (max-width:767px){
+  .es-hero h1{ font-size:2.1rem; }
+  .es-hero-lead{ font-size:16.5px; }
+  .es-hero-cta{ flex-direction:column; }
+  .es-hero-cta .btn{ width:100%; }
+  .es-hero-meta li{ width:100%; justify-content:center; }
+  .es-portrait-tag{ left:50%; transform:translateX(-50%); bottom:-22px; }
+  .es-about-badge{ position:static; margin-top:18px; max-width:none; }
+  .es-creds-list li{ grid-template-columns:1fr; gap:4px; }
+  .es-creds-list .yr{ font-size:14px; }
+  .es-affil li{ width:100%; }
+  /* keep body copy left aligned on phones */
+  .es-block,.es-facts,.es-era,.es-hon,.es-creds-list{ text-align:left; }
+}
+
+/* ---------- reveal ----------
+   WOW.js re-applies visibility:hidden when an element scrolls back out of
+   view, which can leave whole sections blank. Neutralise it and drive the
+   reveal from es-reveal.js instead. The hidden state is scoped to .es-anim,
+   which that script adds, so if the JS never runs the page is fully visible. */
+.wow{ visibility:visible !important; animation-name:none !important; }
+.es-anim .wow{
+  opacity:0; transform:translateY(24px);
+  transition:opacity .85s var(--es-ease), transform .85s var(--es-ease);
+  will-change:opacity,transform;
+}
+.es-anim .wow.es-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .es-anim .wow{ opacity:1 !important; transform:none !important; }
+}
+
+/* ---------- left-align the hero against the demo's centred defaults ---------- */
+.es-hero .es-hero-copy,
+.es-hero .es-hero-copy h1,
+.es-hero .es-hero-copy p{ text-align:left; }
+.es-about .es-block,
+.es-about .es-block h2,
+.es-about .es-block p{ text-align:left; }
+.es-era,.es-era h3,.es-era p,
+.es-hon,.es-hon h3,.es-hon p,
+.es-creds-list,.es-affil,.es-sub{ text-align:left; }
+@media (max-width:991px){
+  .es-hero .es-hero-copy,
+  .es-hero .es-hero-copy h1,
+  .es-hero .es-hero-copy p{ text-align:center; }
+}
+
+/* ---------- navbar sits on a solid steel bar: wordmark must be light ---------- */
+.navbar .es-wordmark b{ color:#fff; }
+.navbar .es-wordmark small{ color:var(--es-copper-2); }
+.navbar-brand{ padding-top:14px; padding-bottom:14px; }
+
+/* ---------- the demo centres all section copy; these blocks read left ---------- */
+.es-about .es-block,
+.es-about .es-block h2,
+.es-about .es-block p,
+.es-about .es-facts,
+.es-about .es-facts li{ text-align:left !important; }
+.es-creds .es-creds-list,
+.es-creds .es-creds-list li,
+.es-creds .es-sub,
+.es-creds .es-affil,
+.es-creds .es-affil li{ text-align:left !important; }
+.es-era,.es-era h3,.es-era p,.es-era-when,.es-era-where{ text-align:left !important; }
+.es-hon,.es-hon h3,.es-hon p{ text-align:left !important; }
+.blog-section .left-text,.blog-section .right-text{ text-align:left !important; }
+
+/* ---------- quote band: lift contrast over the steel plate ---------- */
+.quote-section h3{ color:#fff !important; }
+.quote-section .left-quote i,
+.quote-section .right-quote i{ color:var(--es-copper-2) !important; }
+
+/* ---------- counters ---------- */
+.counter .media-body h3{ color:var(--es-ink); font-size:2.4rem; }
+.counter .media i{ color:var(--es-copper); }
+
+@media (max-width:991px){
+  .es-about .es-block,
+  .es-about .es-block h2,
+  .es-about .es-block p{ text-align:left !important; }
+}
+
+/* the quote band now sits over a photograph: darken it so the text holds up */
+.quote-section{ position:relative; }
+.quote-section::before{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(20,24,27,.90) 0%, rgba(20,24,27,.74) 55%, rgba(20,24,27,.86) 100%);
+}
+.quote-section .container{ position:relative; z-index:1; }
+.quote-section h3{ text-shadow:0 2px 18px rgba(0,0,0,.5); }
+
+/* --- Grimes overrides ------------------------------------------
+   The template's ghost button rendered its label at roughly 2:1
+   on the hero photograph. Given a solid border and a full-strength
+   label it clears AA on the same ground. */
+.es-hero .btn-hvr-transparent,
+.es-hero .btn.button.btn-rounded:not(.btn-light-blue){
+  color:#FFFFFF !important;
+  border-color:rgba(255,255,255,.72) !important;
+}
+.es-hero .btn-hvr-transparent:hover,
+.es-hero .btn.button.btn-rounded:not(.btn-light-blue):hover{
+  color:#101725 !important; background:#FFFFFF !important; border-color:#FFFFFF !important;
+}
+
+/* The theme's accent is #C2762B, which measures 3.2-3.6:1 at small
+   sizes on white and 3.8:1 on the dark card. Under AA on both. One
+   darkened variant for light grounds, one lightened for dark ones,
+   applied by ground rather than by element. */
+.es-eyebrow,.es-era-when,.es-facts b,.es-creds-list .yr,
+.es-hon span,.es-affil small,.es-sub{ color:#7E4A11 !important; }
+.es-era.is-dark .es-era-when,
+.es-career .col-lg-4:first-child .es-era-when,
+.es-hero .es-hero-facts i,.es-hero .es-pill{ color:#EFB877 !important; }
+.es-hero .btn.button.btn-rounded.btn-light-blue{
+  color:#FFFFFF !important; background:#8A5214 !important; border-color:#8A5214 !important;
+}
+.es-hero .btn.button.btn-rounded.btn-light-blue:hover{
+  color:#8A5214 !important; background:#FFFFFF !important; border-color:#FFFFFF !important;
+}
+.es-hero .btn-hvr-transparent,
+.es-hero .btn.button.btn-rounded:not(.btn-light-blue){
+  color:#FFFFFF !important; border-color:rgba(255,255,255,.75) !important;
+}
+.es-hero .btn.button.btn-rounded:not(.btn-light-blue):hover{
+  color:#101725 !important; background:#FFFFFF !important; border-color:#FFFFFF !important;
+}
+/* the hero badge sets 10px on the accent: white on it is 3.2:1, so the
+   badge ground darkens instead of the label lightening */
+.es-hero-badge,.es-hero .es-badge{ background:#7E4A11 !important; }
+.es-hero-badge span,.es-hero-badge small,.es-hero-badge b{ color:#FFFFFF !important; }
+.es-scroll,.es-scroll span{ color:#BCC0C4 !important; }
+
+/* Scoped by ground. The darkened accent is right on paper and wrong on
+   the dark bands, so the dark bands get the lightened one back. */
+.es-honours .es-eyebrow,.es-honours .es-hon span,.es-honours .es-sub,
+.blog-section .es-eyebrow,.blog-section .es-hon span,
+.quote-section .es-cite,.es-hero .es-eyebrow{ color:#EFB877 !important; }
+/* the portrait tag sets 10px white on the accent: 3.2:1 */
+.es-portrait-tag{ background:#7E4A11 !important; }
+.es-portrait-tag b,.es-portrait-tag span{ color:#FFFFFF !important; }
+/* italic titles in the affiliations list inherit the accent */
+.es-affil span i{ color:#7E4A11 !important; font-style:italic }
+
+/* last of it: the quote citation sits on a light ground, the contact
+   links use the framework's default link blue, and the footer sets
+   #888 on #F6F6F6. */
+.quote-section .es-cite{ color:#EFB877 !important; }
+.contact-section .media-body a,.contact-section a{ color:#1A4E7A !important; }
+footer p,footer p b{ color:#4A4A4A !important; }
+footer a{ color:#7E4A11 !important; }
+
+/* These bands carry white text over a background-image with no
+   background-color behind it. If the image fails to load the text
+   lands on white. A colour fallback matching the plate fixes that. */
+.learn-more-section,.quote-section,.es-honours{ background-color:#101725; }
+
+/* ---------- counter band: seventh approved image ----------
+   The counters shipped as a white band with #14181b icons. Turning it
+   into an image band means recolouring every child, not just the
+   parent — a dark ground under inherited dark text is the exact bug
+   that bit .blog-section and .es-honours earlier. background-color is
+   set as well as background-image: if the image 404s the text still
+   lands on a dark ground rather than white-on-white. */
+.counter-section{
+  position:relative;
+  background-color:#101725;
+  background-image:url("../img/video.jpg");
+  background-size:cover;
+  background-position:center 38%;
+}
+.counter-section::before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(16,23,37,.90) 0%, rgba(16,23,37,.82) 100%);
+}
+.counter-section .container{ position:relative; z-index:2; }
+.counter-section h2,
+.counter-section .media .media-body h3,
+.counter-section .media .media-body span{ color:#fff !important; }
+.counter-section p,
+.counter-section .media .media-body p{ color:rgba(255,255,255,.86) !important; }
+.counter-section .media i{ color:#EFB877 !important; }
+
+/* ---------- learn-more band: scrim ----------
+   .quote-section ships with its own dark overlay; .learn-more-section
+   does not. Against the drawn plate that was fine — the plate was flat
+   and dark. Against a photograph of a beam line it is not: the polished
+   pipe on the right runs to near-white, and the eyebrow line and the
+   button outline disappear into it. The contrast auditor cannot see a
+   background-image, so this one has to be caught by eye.
+   Weighted to the right, where the bright metal is. */
+.learn-more-section{ position:relative; }
+.learn-more-section::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 62% 78% at 50% 50%, rgba(20,24,27,.60) 0%, rgba(20,24,27,.30) 100%),
+    linear-gradient(90deg, rgba(20,24,27,.24) 0%, rgba(20,24,27,.34) 52%, rgba(20,24,27,.58) 100%);
+}
+.learn-more-section .container{ position:relative; z-index:2; }
+
+/* ---------- hero: let the hall read ----------
+   The veil was tuned against a flat drawn plate. Against a photograph
+   it flattened the accelerator hall to noise. The left stop is left
+   alone — that is what keeps the headline and lead at AA — and only
+   the right end, behind and around the portrait, is opened up. */
+.es-hero-bg{ opacity:.74; }
+.es-hero-veil{
+  background:
+    radial-gradient(ellipse 70% 60% at 78% 18%, rgba(194,118,43,.26), transparent 62%),
+    linear-gradient(100deg, rgba(20,24,27,.97) 0%, rgba(20,24,27,.88) 44%, rgba(20,24,27,.42) 100%);
+}
+
+/* ==========================================================================
+   LUXURY LAYER
+   Appended last so it wins the cascade without editing anything above.
+
+   The read: this is a man whose product is a checkable record — a Caslon
+   is the face his own journals are set in, and a mono is what an
+   oscilloscope and a citation look like. So the pairing is scholarship
+   plus instrumentation, not fashion-magazine Bodoni. The accent moves
+   from a bright copper to an antique brass, which reads as metal rather
+   than as orange, and the restraint does the rest: hairlines instead of
+   shadows, square corners instead of rounded, and about a third more air
+   in every band.
+   ========================================================================== */
+
+:root{
+  --lx-ink:#0E1114;          /* near-black, warm bias */
+  --lx-deep:#141A20;         /* dark bands */
+  --lx-paper:#F8F6F1;
+  --lx-paper-2:#F1EEE7;
+  --lx-brass:#B08A4F;        /* decoration and text on dark only */
+  --lx-brass-deep:#7C5E2A;   /* small text on light — 5.57:1 on paper */
+  --lx-brass-lt:#DCBB84;     /* text on dark — 9.58:1 on deep */
+  --lx-muted:#5C6570;        /* 5.48:1 on paper */
+  --lx-rule:rgba(14,17,20,.11);
+  --lx-rule-lt:rgba(255,255,255,.14);
+  --lx-ease:cubic-bezier(.19,1,.22,1);
+}
+
+/* ---------- type ----------
+   Libre Caslon Display ships one weight, so hierarchy comes from size,
+   tracking and colour rather than from weight. That constraint is the
+   reason the display type reads as typeset rather than as bolded. */
+body,p,li,td,th,input,textarea,select,button,.btn,.button{
+  font-family:'Manrope','Helvetica Neue',Arial,sans-serif;
+}
+h1,h2,h3,h4,h5,
+.counter .media-body h3,
+.quote-section h3,
+.es-about-badge b,
+.es-portrait-tag b{
+  font-family:'Libre Caslon Display',Georgia,'Times New Roman',serif !important;
+  font-weight:400 !important;
+}
+h1{ letter-spacing:-.028em !important; }
+h2{ letter-spacing:-.022em !important; }
+h3,h4{ letter-spacing:-.014em !important; }
+body{ color:var(--lx-ink); -webkit-font-smoothing:antialiased; }
+p{ line-height:1.78; }
+
+/* micro-labels become instrument labels */
+.es-eyebrow,.es-sub,.es-era-when,.es-creds-list .yr,.es-hon span,
+.es-wordmark small,.es-affil small,.footer-social-icons+p,
+.es-hero-meta,.es-portrait-tag span,.es-about-badge span,
+.quote-section .es-cite{
+  font-family:'IBM Plex Mono','SFMono-Regular',Menlo,monospace !important;
+  letter-spacing:.22em !important;
+  text-transform:uppercase;
+  font-weight:400 !important;
+}
+.es-eyebrow{ font-size:10px !important; color:var(--lx-brass-deep) !important; }
+.es-eyebrow::before{ width:46px; background:var(--lx-brass); opacity:.9; }
+.es-sub{ font-size:10.5px !important; color:var(--lx-brass-deep) !important; }
+
+/* ---------- surfaces: hairlines, not shadows ---------- */
+.es-about-figure img,.blog-section img,.es-portrait img,
+.es-era-card,.es-hon,.es-affil,.es-creds-list,.contact-form input,
+.contact-form textarea,.contact-form select,.es-side-mono{
+  border-radius:2px !important;
+}
+.es-about-figure img,.es-portrait img,.blog-section img{
+  box-shadow:none !important;
+  border:1px solid var(--lx-rule);
+}
+.es-era-card,.es-affil{
+  box-shadow:none !important;
+  border:1px solid var(--lx-rule);
+  background:transparent;
+}
+
+/* ---------- air ---------- */
+section{ padding-top:clamp(88px,9vw,148px) !important; padding-bottom:clamp(88px,9vw,148px) !important; }
+.es-hero{ padding:clamp(150px,15vw,230px) 0 clamp(96px,10vw,150px) !important; }
+.es-head{ margin-bottom:clamp(52px,6vw,84px); }
+
+/* ---------- hero ---------- */
+.es-hero{ background:var(--lx-ink); }
+.es-hero h1{ font-size:clamp(2.7rem,6.2vw,5rem) !important; line-height:1.02 !important; }
+.es-hero h1 span{
+  font-family:'IBM Plex Mono',monospace !important;
+  font-size:11px !important; letter-spacing:.26em !important; text-transform:uppercase;
+  color:var(--lx-brass-lt) !important; margin-top:22px; display:block;
+}
+.es-kicker{
+  font-family:'IBM Plex Mono',monospace !important;
+  font-size:9.5px !important; letter-spacing:.28em !important;
+  border-color:var(--lx-rule-lt); background:transparent; border-radius:0;
+  padding:9px 20px;
+}
+.es-kicker i{ background:var(--lx-brass); box-shadow:0 0 0 4px rgba(176,138,79,.18); }
+.es-hero-lead{ font-family:'Libre Caslon Display',Georgia,serif !important; font-size:clamp(1.15rem,1.7vw,1.42rem) !important; line-height:1.5 !important; }
+.es-hero-meta li{ font-size:9.5px !important; letter-spacing:.2em !important; }
+.es-portrait img{ border:1px solid rgba(255,255,255,.13); }
+.es-portrait-tag{ background:var(--lx-brass-deep) !important; border-radius:0 !important; }
+.es-portrait-tag span{ font-size:9px !important; letter-spacing:.22em !important; }
+
+/* ---------- buttons: flat, square, quiet ---------- */
+.btn.button{
+  border-radius:0 !important;
+  font-family:'IBM Plex Mono',monospace !important;
+  font-size:10.5px !important; letter-spacing:.2em !important;
+  text-transform:uppercase; font-weight:400 !important;
+  padding:17px 34px !important;
+  transition:background .5s var(--lx-ease), color .5s var(--lx-ease), border-color .5s var(--lx-ease);
+}
+.btn.btn-light-blue,.btn.btn-hvr-light-blue{
+  background:var(--lx-brass-deep) !important; border-color:var(--lx-brass-deep) !important; color:#fff !important;
+}
+.btn.trans-btn{ border:1px solid var(--lx-rule-lt) !important; background:transparent !important; }
+
+/* ---------- bands ---------- */
+.learn-more-section,.quote-section,.es-honours,.counter-section{
+  background-color:var(--lx-deep) !important;
+}
+.quote-section h3{ font-size:clamp(1.5rem,2.9vw,2.35rem) !important; line-height:1.36 !important; }
+.quote-section .es-cite{ font-size:9.5px !important; color:var(--lx-brass-lt) !important; }
+.es-honours .es-eyebrow,.es-honours .es-hon span,.es-hero .es-eyebrow{
+  color:var(--lx-brass-lt) !important;
+}
+.es-hon{ background:rgba(255,255,255,.032) !important; border:1px solid var(--lx-rule-lt) !important; box-shadow:none !important; }
+.counter-section .media i{ color:var(--lx-brass-lt) !important; }
+.counter-section .media .media-body span{
+  font-family:'Libre Caslon Display',Georgia,serif !important;
+  font-weight:400 !important; letter-spacing:-.02em;
+}
+
+/* ---------- light sections ---------- */
+.es-about,.es-creds,.es-affil-wrap,.blog-section,.contact-section,.es-services{
+  background-color:var(--lx-paper) !important;
+}
+.es-head p,.es-lead,.es-about p{ color:#3D454E !important; }
+.es-facts b,.es-creds-list .yr{ color:var(--lx-brass-deep) !important; }
+.es-creds-list li,.es-facts li{ border-color:var(--lx-rule) !important; }
+
+/* ---------- reveals: slower, further ---------- */
+.wow{ animation-duration:1.15s !important; }
+@media (prefers-reduced-motion:reduce){
+  .wow{ animation:none !important; opacity:1 !important; }
+  *{ transition-duration:.01ms !important; }
+}
+
+/* ---------- contrast repairs on the luxury layer ----------
+   1. The paper went from #f4f2ee to #F8F6F1, which lifted every ground
+      by about 4 points and dropped the template's <small> from 4.6:1 to
+      4.46:1. Under AA by 0.04 — measured, not eyeballed.
+   2. `.es-head p{color:#3D454E}` was written for the light sections and
+      then inherited by .es-honours, which is a dark band: 1.8:1. Same
+      bug as .blog-section earlier. The rule is now scoped off the dark
+      bands rather than patched per-band. */
+small,.es-creds-list small,.es-hon small,.es-affil small{ color:var(--lx-muted) !important; }
+.es-head p,.es-lead,.es-about p{ color:#3D454E !important; }
+.es-honours .es-head p,.es-honours .es-lead,
+.learn-more-section .es-head p,.quote-section .es-head p,
+.counter-section .es-head p,.counter-section p{
+  color:rgba(255,255,255,.84) !important;
+}
+.es-honours small,.counter-section small{ color:rgba(255,255,255,.72) !important; }
+
+/* The blanket small{} rule above reached into the navbar wordmark, which
+   sits on the dark bar: 2.27:1. Scoped back out, and the bar itself moves
+   to the new ink so the whole chrome is one family rather than the demo's
+   teal. */
+.navbar,.navbar.sticky,.header-nav{ background-color:var(--lx-ink) !important; }
+.navbar .es-wordmark b{ color:#fff !important; font-family:'Libre Caslon Display',Georgia,serif !important; font-weight:400 !important; font-size:20px; }
+.navbar .es-wordmark small{ color:var(--lx-brass-lt) !important; font-size:9px !important; letter-spacing:.24em !important; }
+.navbar .nav-link,.navbar .navbar-nav .nav-link{
+  font-family:'IBM Plex Mono',monospace !important;
+  font-size:10.5px !important; letter-spacing:.18em !important; text-transform:uppercase;
+}
+
+/* ---------- retire the demo's teal ----------
+   --es-steel (#17323f) survived in three places: the "now" career card,
+   the about badge and the .es-sub label. Beside the new ink it reads as
+   a second, unrelated blue. Everything moves onto the one dark. */
+.es-era.is-now,.es-about-badge{
+  background:var(--lx-deep) !important;
+  border:1px solid var(--lx-rule-lt) !important;
+}
+.es-era.is-now .es-era-when,.es-about-badge span{ color:var(--lx-brass-lt) !important; }
+.es-era.is-now h3,.es-era.is-now p,.es-about-badge b{ color:#fff !important; }
+.es-era.is-now p{ color:rgba(255,255,255,.84) !important; }
+.es-era-card{ padding:32px 30px !important; }
+
+/* the three service cards: hairline, no fill, no lift */
+.es-services .es-card,.es-services .media,.es-svc{
+  background:transparent !important; box-shadow:none !important;
+  border:1px solid var(--lx-rule) !important; border-radius:2px !important;
+}
+
+/* ---------- counter band ----------
+   The figure sat hard against its icon with no optical gap, and the
+   plate behind was being scaled up until it framed his face. Wider
+   source, and real space between mark and number. */
+.counter-section{ background-position:center 34% !important; }
+.counter-section .media{ align-items:center; }
+.counter-section .media i{ margin-right:20px; font-size:30px !important; opacity:.92; }
+.counter-section .media .media-body{ padding-left:0 !important; }
+.counter-section .media .media-body span{ font-size:40px !important; line-height:1; display:block; margin-bottom:10px; }
+.counter-section .media .media-body p{ font-size:12.5px !important; line-height:1.6; margin:0; }

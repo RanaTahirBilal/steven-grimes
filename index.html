@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Steven M. Grimes — Nuclear Physicist, Ohio University</title>
+<meta name="description" content="Steven M. Grimes, Distinguished Professor Emeritus of Physics and Astronomy at Ohio University. Nuclear level densities, neutron-nucleus reactions, and the Edwards Accelerator Laboratory.">
+<link rel="canonical" href="https://ranatahirbilal.github.io/steven-grimes/">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#17121A">
+<meta property="og:title" content="Dr. Steven M. Grimes — Nuclear Physicist, Ohio University">
+<meta property="og:description" content="Distinguished Professor Emeritus, Department of Physics and Astronomy, Ohio University. The statistical structure of nuclei.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://ranatahirbilal.github.io/steven-grimes/">
+<meta property="og:image" content="https://ranatahirbilal.github.io/steven-grimes/share-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Steven M. Grimes","honorificPrefix":"Dr.",
+"jobTitle":"Distinguished Professor Emeritus of Physics and Astronomy",
+"affiliation":{"@type":"CollegeOrUniversity","name":"Ohio University","department":"Department of Physics and Astronomy"},
+"address":{"@type":"PostalAddress","addressLocality":"Athens","addressRegion":"OH","addressCountry":"US"},
+"alumniOf":[{"@type":"CollegeOrUniversity","name":"Stanford University"},{"@type":"CollegeOrUniversity","name":"University of Wisconsin"}],
+"knowsAbout":["Nuclear level densities","Neutron-nucleus reactions","Nuclear astrophysics","Statistical structure of nuclei"]}
+</script>
+
+<style>
+/* ==========================================================
+   DR. STEVEN M. GRIMES
+   Distinguished Professor Emeritus, Physics and Astronomy,
+   Ohio University.
+
+   IDEA — LEVEL DENSITY
+   His subject is how the number of available states in a
+   nucleus multiplies as energy rises: countable one by one
+   low down, describable only statistically higher up. The
+   spine of this page is a level scheme. The rules start
+   sparse and grow denser as you descend, and each marked
+   rule is a real date. It is his physics and his career in
+   the same diagram.
+
+   COLOUR — taken from his own photograph
+   The near-black is the darkest thread in his tartan bow
+   tie. The paper is his studio background. The tan is that
+   background at full strength, the tweed is his jacket, the
+   crimson is the red in the tie and the lilac is his shirt.
+
+   TYPE
+   Newsreader for display, Archivo for reading, IBM Plex
+   Mono for anything a physicist would expect to see set in
+   mono: citations, energies, affiliations, dates.
+   ========================================================== */
+
+:root{
+  --ink:#17121A;
+  --ink-2:#211A23;
+  --ink-3:#2C2430;
+  --paper:#F4EDE3;
+  --paper-2:#E9DFD1;
+  --tan:#B49C84;
+  --tweed:#8E7050;
+  --crimson:#7A1520;
+  --crimson-lt:#C97A70;   /* the same red, lifted for dark grounds */
+  --lav:#9F87A9;
+  --lav-lt:#C3B2CB;
+
+  --slate:#463C43;        /* body on paper  */
+  --slate-2:#655A61;      /* secondary      */
+  --bone:#EFE9E1;         /* primary on ink */
+  --bone-2:#B3A9AF;       /* secondary on ink */
+  --rule:#D6C9B8;
+  --rule-ink:#372E3B;
+
+  --disp:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --t-h1:clamp(46px,9vw,128px);
+  --t-h2:clamp(28px,4.4vw,58px);
+  --t-h3:clamp(19px,1.9vw,25px);
+  --t-body:17px;
+  --t-small:15px;
+  --t-label:11.5px;
+
+  --gut:clamp(20px,5vw,72px);
+  --band:clamp(70px,10vw,150px);
+  --maxw:1280px;
+}
+*,*::before,*::after{ box-sizing:border-box }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth }
+body{
+  margin:0; background:var(--paper); color:var(--slate);
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.65;
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
+}
+img{ max-width:100%; display:block }
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{ margin:0 }
+ul,ol{ padding:0; list-style:none }
+a{ color:inherit }
+::selection{ background:var(--crimson); color:var(--paper) }
+p,li,h1,h2,h3,dd,dt{ overflow-wrap:break-word }
+h1,h2,h3,.mono,.stat b{ overflow-wrap:normal; word-break:normal; hyphens:none }
+
+.wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--gut); padding-right:var(--gut) }
+.band{ position:relative; overflow-x:clip }
+.b-paper{ background:var(--paper); color:var(--slate) }
+.b-paper2{ background:var(--paper-2); color:var(--slate) }
+.b-ink{ background:var(--ink); color:var(--bone) }
+.pad{ padding-top:var(--band); padding-bottom:var(--band) }
+
+.disp{ font-family:var(--disp); font-weight:400; line-height:1.02; letter-spacing:-.02em; text-wrap:balance }
+.label{
+  font-family:var(--mono); font-size:var(--t-label); font-weight:500;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--crimson);
+}
+.b-ink .label{ color:var(--crimson-lt) }
+.lede{ font-size:clamp(18px,1.6vw,22px); line-height:1.55; color:var(--slate-2); max-width:54ch }
+.b-ink .lede{ color:var(--bone-2) }
+
+a:focus-visible,button:focus-visible{ outline:2px solid var(--crimson); outline-offset:3px }
+.b-ink a:focus-visible{ outline-color:var(--crimson-lt) }
+.skip{ position:absolute; left:-9999px; top:0; z-index:99; background:var(--ink); color:var(--paper); padding:12px 18px }
+.skip:focus{ left:12px; top:12px }
+
+/* ---------- masthead ---------- */
+.top{
+  display:flex; align-items:baseline; justify-content:space-between; gap:18px;
+  flex-wrap:wrap; padding:24px 0 20px; border-bottom:1px solid var(--rule);
+}
+.top .who{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink) }
+.top nav{ display:flex; gap:clamp(14px,2vw,30px); flex-wrap:wrap }
+.top nav a{
+  font-family:var(--mono); font-size:var(--t-label); letter-spacing:.16em;
+  text-transform:uppercase; text-decoration:none; color:var(--slate-2);
+  padding-bottom:3px; border-bottom:1px solid transparent; transition:color .3s ease, border-color .3s ease;
+}
+.top nav a:hover{ color:var(--crimson); border-bottom-color:var(--crimson) }
+
+/* ---------- hero ---------- */
+.hero{ padding:clamp(40px,6vw,84px) 0 clamp(46px,7vw,96px) }
+.hero-grid{
+  display:grid; grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
+  gap:clamp(28px,5vw,76px); align-items:end;
+}
+.hero h1{ font-size:var(--t-h1); color:var(--ink) }
+.hero h1 .sm{ display:block; font-size:.42em; letter-spacing:-.005em; color:var(--tweed); margin-bottom:.28em }
+.hero .role{
+  font-family:var(--mono); font-size:clamp(12px,1.05vw,14px); letter-spacing:.15em;
+  text-transform:uppercase; color:var(--slate-2); margin-top:clamp(22px,2.6vw,34px);
+  padding-top:18px; border-top:1px solid var(--rule); line-height:1.9;
+}
+.hero .role b{ color:var(--ink); font-weight:500 }
+.hero-line{ margin-top:clamp(20px,2.4vw,30px); font-size:clamp(17px,1.5vw,21px); line-height:1.55; max-width:44ch; color:var(--slate) }
+.hero-portrait{ position:relative }
+.hero-portrait img{ width:100%; height:auto; border:1px solid var(--rule) }
+.hero-portrait figcaption{
+  font-family:var(--mono); font-size:var(--t-label); letter-spacing:.13em;
+  text-transform:uppercase; color:var(--slate-2); padding-top:12px;
+}
+@media (max-width:880px){
+  .hero-grid{ grid-template-columns:1fr; align-items:start; gap:34px }
+  .hero-portrait{ max-width:420px }
+}
+
+/* ---------- the level scheme: his physics, and his spine ----------
+   Rules start far apart at the top and close up as they descend,
+   which is what a nuclear level scheme actually looks like as
+   excitation energy rises. ---------------------------------- */
+.scheme{ position:relative; padding:clamp(34px,5vw,64px) 0 clamp(20px,3vw,36px) }
+.scheme-rows{ display:flex; flex-direction:column }
+.lvl{
+  position:relative; display:grid; grid-template-columns:104px minmax(0,1fr);
+  gap:clamp(14px,2.2vw,34px); align-items:start;
+  padding-top:var(--gap); border-top:1px solid var(--rule-ink);
+}
+.b-paper .lvl{ border-top-color:var(--rule) }
+.lvl .yr{
+  font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--crimson-lt);
+  font-variant-numeric:tabular-nums; padding-top:2px;
+}
+.b-paper .lvl .yr{ color:var(--crimson) }
+.lvl h3{ font-family:var(--disp); font-weight:400; font-size:var(--t-h3); line-height:1.2; color:var(--bone); margin-bottom:5px }
+.b-paper .lvl h3{ color:var(--ink) }
+.lvl p{ font-size:var(--t-small); line-height:1.6; color:var(--bone-2); max-width:60ch }
+.b-paper .lvl p{ color:var(--slate-2) }
+.lvl .src{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--bone-2); display:block; margin-top:7px }
+.b-paper .lvl .src{ color:var(--slate-2) }
+@media (max-width:640px){
+  .lvl{ grid-template-columns:1fr; gap:6px }
+}
+
+/* the density strip: a drawn level scheme, sparse to dense */
+/* the drawn level scheme. An energy axis on the left, the levels to
+   its right, the ground state at the foot. The rules bunch upward
+   because that is what happens to nuclear states as E rises. */
+.density{
+  display:grid; grid-template-columns:34px minmax(0,1fr); grid-template-rows:1fr auto;
+  column-gap:14px; row-gap:10px; margin:0; align-self:stretch; min-height:clamp(300px,34vw,440px);
+}
+.d-axis{ position:relative; grid-row:1; border-left:1px solid var(--bone-2) }
+.d-axis .arrow{
+  position:absolute; left:-4px; top:0; width:7px; height:7px;
+  border-left:1px solid var(--bone-2); border-top:1px solid var(--bone-2);
+  transform:rotate(45deg);
+}
+.d-axis em{
+  position:absolute; left:-22px; top:50%; transform:translateY(-50%);
+  font-family:var(--mono); font-style:italic; font-size:13px; color:var(--bone-2);
+}
+.d-levels{ grid-row:1; display:flex; flex-direction:column; justify-content:flex-end }
+.d-levels i{ display:block; height:1px; background:#57495C; margin-top:var(--m) }
+.d-levels i.on{ background:var(--crimson-lt); height:2px }
+.d-ground{
+  grid-column:2; grid-row:2; font-family:var(--mono); font-size:10.5px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--bone-2);
+  border-top:2px solid var(--bone-2); padding-top:8px;
+}
+.b-paper .d-axis{ border-left-color:var(--slate-2) }
+.b-paper .d-levels i{ background:var(--rule) }
+@media (max-width:820px){
+  /* the E label hangs to the left of the axis and was running off the
+     page edge once the diagram became the first thing in its column */
+  .density{ min-height:280px; margin-top:14px; padding-left:24px }
+}
+
+/* ---------- figures / bands ---------- */
+.spread{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,4vw,64px); align-items:center }
+@media (max-width:820px){ .spread{ grid-template-columns:1fr } }
+.figframe{ border:1px solid var(--rule-ink) }
+.b-paper .figframe{ border-color:var(--rule) }
+.figframe img{ width:100%; height:auto }
+.figframe figcaption{
+  font-family:var(--mono); font-size:var(--t-label); letter-spacing:.13em; text-transform:uppercase;
+  color:var(--bone-2); padding:11px 13px; border-top:1px solid var(--rule-ink);
+}
+.b-paper .figframe figcaption{ color:var(--slate-2); border-top-color:var(--rule) }
+
+/* ---------- citation ---------- */
+.cite{
+  font-family:var(--mono); font-size:clamp(13px,1.15vw,15.5px); line-height:1.85;
+  border-left:2px solid var(--crimson); padding:clamp(18px,2.2vw,26px) clamp(18px,2.4vw,30px);
+  background:var(--paper-2); color:var(--slate); margin-top:clamp(24px,3vw,38px);
+}
+.b-ink .cite{ background:var(--ink-2); color:var(--bone); border-left-color:var(--crimson-lt) }
+.cite b{ font-weight:500; color:var(--ink) }
+.b-ink .cite b{ color:var(--bone) }
+.cite .j{ font-style:italic }
+.cite a{ color:var(--crimson); text-underline-offset:3px }
+.b-ink .cite a{ color:var(--crimson-lt) }
+.cite .who{ display:block; margin-top:10px; font-size:.86em; color:var(--slate-2) }
+.b-ink .cite .who{ color:var(--bone-2) }
+
+/* ---------- plain record lists ---------- */
+.record{ border-top:1px solid var(--rule); margin-top:clamp(26px,3vw,40px) }
+.b-ink .record{ border-top-color:var(--rule-ink) }
+.record > div{
+  display:grid; grid-template-columns:190px minmax(0,1fr); gap:clamp(12px,2vw,28px);
+  padding:15px 0; border-bottom:1px solid var(--rule); align-items:baseline;
+}
+.b-ink .record > div{ border-bottom-color:var(--rule-ink) }
+.record dt{ font-family:var(--mono); font-size:var(--t-label); letter-spacing:.15em; text-transform:uppercase; color:var(--crimson) }
+.b-ink .record dt{ color:var(--crimson-lt) }
+.record dd{ margin:0; font-size:var(--t-small); line-height:1.6 }
+@media (max-width:680px){ .record > div{ grid-template-columns:1fr; gap:4px } }
+
+/* ---------- statement ---------- */
+.stmt{ font-size:var(--t-h2); line-height:1.06; color:var(--ink); max-width:17ch }
+.b-ink .stmt{ color:var(--bone) }
+
+/* ---------- contact ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+  font-family:var(--sans); font-size:var(--t-small); font-weight:500;
+  padding:15px 26px; border:1px solid var(--crimson-lt); background:var(--crimson-lt); color:var(--ink);
+  transition:background .3s ease, color .3s ease, transform .3s cubic-bezier(.2,.7,.25,1);
+}
+.btn:hover{ background:transparent; color:var(--crimson-lt); transform:translateY(-2px) }
+.b-paper .btn{ border-color:var(--crimson); background:var(--crimson); color:var(--paper) }
+.b-paper .btn:hover{ background:transparent; color:var(--crimson) }
+
+/* ---------- footer ---------- */
+.foot{ border-top:1px solid var(--rule-ink); padding:30px 0 40px }
+.foot p{ font-family:var(--mono); font-size:11.5px; line-height:1.9; color:var(--bone-2); letter-spacing:.04em }
+.foot a{ color:var(--bone); text-underline-offset:3px }
+
+/* ---------- reveal ---------- */
+.js .rv{ opacity:0; transform:translateY(14px) }
+.js .rv.in{ opacity:1; transform:none; transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.25,1); transition-delay:calc(var(--i,0) * 70ms) }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto }
+  .js .rv,.js .rv.in{ opacity:1 !important; transform:none !important; transition:none !important }
+  .btn,.top nav a{ transition:none !important }
+  .btn:hover{ transform:none !important }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the record</a>
+
+<div class="band b-paper">
+  <div class="wrap">
+    <header class="top">
+      <span class="who">Steven M. Grimes</span>
+      <nav aria-label="Sections">
+        <a href="#subject">The subject</a>
+        <a href="#career">Career</a>
+        <a href="#lab">Edwards Lab</a>
+        <a href="#record">Record</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1 class="disp"><span class="sm">Dr.</span>Steven M.<br>Grimes</h1>
+          <p class="role">
+            <b>Distinguished Professor Emeritus</b><br>
+            Department of Physics and Astronomy<br>
+            Ohio University &middot; Athens, Ohio
+          </p>
+          <p class="hero-line">A nuclear physicist who has spent his career on a question you cannot answer by counting: how many ways a nucleus can hold its energy.</p>
+        </div>
+        <figure class="hero-portrait rv">
+          <img src="portrait.jpg" alt="Dr. Steven M. Grimes in a herringbone tweed jacket and tartan bow tie." width="1100" height="1375" fetchpriority="high" decoding="async">
+          <figcaption>Steven M. Grimes &middot; Athens, Ohio</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ================= THE SUBJECT ================= -->
+<div class="band b-ink pad" id="subject">
+  <div class="wrap">
+    <p class="label">The subject</p>
+    <div class="spread" style="margin-top:clamp(22px,3vw,38px); align-items:stretch">
+      <div>
+        <h2 class="disp stmt">Low down you can count them. Higher up you cannot.</h2>
+        <p class="lede" style="margin-top:clamp(20px,2.4vw,30px)">A nucleus can hold its energy in a finite number of arrangements. Near the ground state those arrangements are few enough to list one at a time. Raise the energy and they multiply until listing them is hopeless, and the only honest description left is a statistical one.</p>
+        <p class="lede" style="margin-top:18px">That multiplication is called the level density. Measuring it, and working out the rules it follows, is what he does. Ohio University calls his speciality <b style="color:var(--bone);font-weight:500">the statistical structure of nuclei</b>.</p>
+      </div>
+      <figure class="density rv" aria-hidden="true">
+        <span class="d-axis"><i class="arrow"></i><em>E</em></span>
+        <span class="d-levels" id="density"></span>
+        <span class="d-ground">Ground state</span>
+      </figure>
+    </div>
+    <p class="label" style="margin-top:clamp(28px,3.4vw,44px);color:var(--bone-2)">A level scheme. Energy rises upward, and the states crowd together as it does.</p>
+  </div>
+</div>
+
+<!-- ================= CAREER ================= -->
+<div class="band b-paper pad" id="career">
+  <div class="wrap">
+    <p class="label">The record</p>
+    <h2 class="disp stmt" style="margin-top:16px">Livermore, then Athens, and he never really left.</h2>
+    <div class="scheme">
+      <div class="scheme-rows">
+
+        <div class="lvl rv" style="--gap:clamp(30px,4.4vw,58px)">
+          <span class="yr">1963</span>
+          <div>
+            <h3>Bachelor of Science, Stanford University</h3>
+            <p>The first degree. He has said his interest in the sciences began at home, helping his father, an engineer, work out the heating, cooling and electrical systems for the family house.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(28px,4vw,52px)">
+          <span class="yr">1964</span>
+          <div>
+            <h3>Master of Science, University of Wisconsin</h3>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(26px,3.6vw,46px)">
+          <span class="yr">1968</span>
+          <div>
+            <h3>Doctor of Philosophy, University of Wisconsin</h3>
+            <p>Elected to Sigma Xi and Phi Beta Kappa during his years at Wisconsin.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(24px,3.2vw,40px)">
+          <span class="yr">1968&ndash;70</span>
+          <div>
+            <h3>Postdoctoral fellow, Basel and Livermore</h3>
+            <p>A year at the University of Basel in Switzerland, then a year at Lawrence Livermore National Laboratory in California.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(22px,2.8vw,35px)">
+          <span class="yr">1971</span>
+          <div>
+            <h3>Physicist, Lawrence Livermore National Laboratory</h3>
+            <p>Hired by the laboratory that had just hosted him. He stayed ten years.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(20px,2.5vw,31px)">
+          <span class="yr">1978</span>
+          <div>
+            <h3>Visiting professor, Ohio University</h3>
+            <p>Teaching in Athens while still on the Livermore staff. In the spring of the following year the university photographed him sitting on top of the newly installed magnetic quadrupole triplet spectrometer in the large target room, alongside Roger Finlay and Jacobo Rapaport.</p>
+            <span class="src">Ohio University, Edwards Accelerator Laboratory at 50</span>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(18px,2.2vw,27px)">
+          <span class="yr">1981</span>
+          <div>
+            <h3>Professor of Physics, Ohio University</h3>
+            <p>Full time, and the end of the Livermore decade. The university's own register puts it plainly: he came to Ohio University from Lawrence Livermore National Laboratory in 1981.</p>
+            <span class="src">Ohio University, Distinguished Professor register</span>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(16px,1.9vw,23px)">
+          <span class="yr">to 1991</span>
+          <div>
+            <h3>Director, Edwards Accelerator Laboratory</h3>
+            <p>Running the accelerator as well as using it.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(14px,1.6vw,19px)">
+          <span class="yr">2001</span>
+          <div>
+            <h3>Distinguished Professor, Ohio University</h3>
+            <p>The university's highest faculty honour. Its citation records his research interests as MeV neutron cross sections measured with time&#8209;of&#8209;flight techniques.</p>
+            <span class="src">Ohio University, Distinguished Professor register &middot; Physics, 2001</span>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(12px,1.4vw,16px)">
+          <span class="yr">2008</span>
+          <div>
+            <h3>Outstanding Referee</h3>
+            <p>For the work of reading other physicists' papers, which is unpaid, anonymous and the reason the literature holds together.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(11px,1.2vw,14px)">
+          <span class="yr">2019</span>
+          <div>
+            <h3>Still first author</h3>
+            <p>Fifty-one years after the doctorate, a paper on the level density rotational enhancement factor in <i>Physical Review C</i>, with his Ohio University colleagues T. N. Massey and A. V. Voinov.</p>
+          </div>
+        </div>
+
+        <div class="lvl rv" style="--gap:clamp(10px,1.1vw,12px)">
+          <span class="yr">Now</span>
+          <div>
+            <h3>Distinguished Professor Emeritus</h3>
+            <p>Consulting for Lawrence Livermore National Laboratory and for Los Alamos National Laboratory in New Mexico.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= THE LAB ================= -->
+<div class="band b-ink pad" id="lab">
+  <div class="wrap">
+    <p class="label">Edwards Accelerator Laboratory</p>
+    <div class="spread" style="margin-top:clamp(22px,3vw,38px)">
+      <div>
+        <h2 class="disp stmt">It started in a garage.</h2>
+        <p class="lede" style="margin-top:clamp(20px,2.4vw,30px)">Ohio University's accelerator laboratory began in 1962 with a small 150&#8209;kV Cockcroft&#8209;Walton machine housed in an automobile garage. A one million dollar Atomic Energy Commission grant paid for the 4.5&#8209;MV tandem in 1967, and the first experiments ran in 1971. It is named for John E. Edwards, 1932 to 1972.</p>
+        <p class="lede" style="margin-top:18px">Dr. Grimes directed it until 1991. The neutron work that runs through his publications &mdash; cross sections, evaporation spectra, level densities &mdash; is work done on that machine.</p>
+        <span class="src" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-2);display:block;margin-top:20px">Source: Ohio University, Edwards Accelerator Laboratory at 50</span>
+      </div>
+      <figure class="figframe rv">
+        <img src="detail.jpg" alt="Dr. Steven M. Grimes, close portrait." width="980" height="1176" loading="lazy" decoding="async">
+        <figcaption>Steven M. Grimes</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- ================= THE PUBLISHED RECORD ================= -->
+<div class="band b-paper pad" id="record">
+  <div class="wrap">
+    <p class="label">Published</p>
+    <h2 class="disp stmt" style="margin-top:16px">The most recent one, in full.</h2>
+    <p class="lede" style="margin-top:clamp(18px,2.2vw,26px)">He has contributed to a great many articles in the professional and scientific journals. Rather than count them, here is the latest, set out the way a physicist would expect to read it.</p>
+
+    <div class="cite rv">
+      <b>S. M. Grimes, T. N. Massey and A. V. Voinov</b>,<br>
+      &ldquo;Level density rotational enhancement factor,&rdquo;<br>
+      <span class="j">Physical Review C</span> <b>99</b>, 064331 &mdash; published 27 June 2019.<br>
+      <a href="https://doi.org/10.1103/PhysRevC.99.064331" target="_blank" rel="noopener noreferrer">doi.org/10.1103/PhysRevC.99.064331</a>
+      <span class="who">Affiliation as printed: Department of Physics and Astronomy, Ohio University, Athens, Ohio 45701, USA. S. M. Grimes, first and corresponding author.</span>
+    </div>
+
+    <dl class="record rv">
+      <div><dt>Edited</dt><dd><i>Moment Methods</i>, 1979</dd></div>
+      <div><dt>Edited</dt><dd><i>Neutron-Nucleus Collisions</i>, 1985</dd></div>
+      <div><dt>Fields</dt><dd>Nuclear level densities &middot; neutron&#8209;nucleus reactions &middot; MeV neutron cross sections by time&#8209;of&#8209;flight &middot; nuclear astrophysics</dd></div>
+      <div><dt>Consulting</dt><dd>Lawrence Livermore National Laboratory &middot; Los Alamos National Laboratory</dd></div>
+    </dl>
+  </div>
+</div>
+
+<!-- ================= RECOGNITION ================= -->
+<div class="band b-paper2 pad">
+  <div class="wrap">
+    <p class="label">Recognition</p>
+    <dl class="record rv" style="margin-top:clamp(20px,2.6vw,34px)">
+      <div><dt>2001</dt><dd><b>Distinguished Professor, Ohio University.</b> The university's highest faculty honour, listed under Physics in its register of recipients.</dd></div>
+      <div><dt>Emeritus</dt><dd><b>Distinguished Professor Emeritus</b>, Department of Physics and Astronomy, Ohio University.</dd></div>
+      <div><dt>Fellowship</dt><dd><b>Fellow of the American Physical Society.</b></dd></div>
+      <div><dt>2008</dt><dd><b>Outstanding Referee.</b></dd></div>
+      <div><dt>Societies</dt><dd>Sigma Xi &middot; Phi Beta Kappa</dd></div>
+      <div><dt>Listed</dt><dd>Who&rsquo;s Who in America, 72nd edition</dd></div>
+    </dl>
+  </div>
+</div>
+
+<!-- ================= AWAY FROM THE DESK ================= -->
+<div class="band b-ink pad">
+  <div class="wrap">
+    <div class="spread" style="align-items:center">
+      <figure class="figframe rv">
+        <img src="wide.jpg" alt="Dr. Steven M. Grimes." width="1680" height="1120" loading="lazy" decoding="async">
+        <figcaption>Steven M. Grimes</figcaption>
+      </figure>
+      <div>
+        <p class="label">Away from the desk</p>
+        <h2 class="disp stmt" style="margin-top:16px">Reading, photography, travel.</h2>
+        <p class="lede" style="margin-top:clamp(18px,2.2vw,26px)">On what should draw the next generation into the field, he has said they ought to be personally invested in the subject and find it genuinely captivating &mdash; which is a fair description of a man still publishing five decades after his doctorate.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="band b-paper pad" id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <h2 class="disp stmt" style="margin-top:16px;max-width:20ch">Enquiries reach him through the department.</h2>
+    <p class="lede" style="margin-top:clamp(18px,2.2vw,26px)">For research correspondence, consulting enquiries, or requests to speak.</p>
+    <p style="margin-top:clamp(26px,3vw,38px)">
+      <a class="btn" href="mailto:grimes@ohio.edu?subject=Enquiry%20via%20your%20website">Write to Dr. Grimes</a>
+    </p>
+    <dl class="record" style="margin-top:clamp(34px,4vw,52px)">
+      <div><dt>Department</dt><dd>Department of Physics and Astronomy, Ohio University, Athens, Ohio 45701</dd></div>
+      <div><dt>Laboratory</dt><dd><a href="https://www.ohio.edu/cas/edwards-accelerator-laboratory" target="_blank" rel="noopener noreferrer">Edwards Accelerator Laboratory</a></dd></div>
+    </dl>
+  </div>
+</div>
+
+</main>
+
+<footer class="band b-ink foot">
+  <div class="wrap">
+    <p>
+      Dr. Steven M. Grimes &middot; Distinguished Professor Emeritus, Department of Physics and Astronomy, Ohio University, Athens, Ohio.<br>
+      Biographical detail on this page is drawn from Ohio University's Distinguished Professor register, Ohio University news, and <i>Physical Review C</i> 99, 064331. The photograph is his own.<br>
+      Site by <a href="https://ranatahirbilal.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Rana Tahir Bilal</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  if (!('IntersectionObserver' in window) || document.visibilityState !== 'visible') { return; }
+  document.documentElement.classList.add('js');
+
+  /* the level scheme in the subject band, drawn rather than pictured:
+     twenty-two rules whose spacing shrinks as the diagram rises, which
+     is what happens to nuclear states as excitation energy goes up. */
+  var box = document.getElementById('density');
+  if (box) {
+    var N = 30, html = '';
+    for (var i = 0; i < N; i++) {
+      var t = i / (N - 1);                      /* 0 at the top, 1 at the bottom */
+      var gap = Math.round(1 + Math.pow(t, 2.4) * 46);
+      var lit = (i === N - 1) || (i === N - 5) || (i === N - 11);
+      html += '<i class="' + (lit ? 'on' : '') + '" style="--m:' + gap + 'px"></i>';
+    }
+    box.innerHTML = html;
+  }
+
+  /* Reveal. .rv starts hidden, so it has to fail open: an observer, a
+     sweep on scroll for anchor jumps, and an unconditional backstop. */
+  var items = [].slice.call(document.querySelectorAll('.rv'));
+  items.forEach(function(el, i){ el.style.setProperty('--i', Math.min(i % 4, 3)); });
+  function show(el){ el.classList.add('in'); }
+  function sweep(){
+    for (var i = 0; i < items.length; i++){
+      if (items[i].classList.contains('in')) { continue; }
+      var r = items[i].getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.94 && r.bottom > 0) { show(items[i]); }
+    }
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin:'0px 0px -6% 0px', threshold:0.05 });
+  items.forEach(function(el){ io.observe(el); });
+  var pend = false;
+  window.addEventListener('scroll', function(){
+    if (!pend){ pend = true; requestAnimationFrame(function(){ sweep(); pend = false; }); }
+  }, { passive:true });
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) { sweep(); } });
+  window.addEventListener('pageshow', sweep);
+  sweep();
+  window.setTimeout(function(){ items.forEach(show); }, 5000);
+})();
+</script>
+</body>
+</html>
